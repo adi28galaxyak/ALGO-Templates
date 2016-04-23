@@ -1,0 +1,86 @@
+Templates of Number Theory
+
+1. Prime Generator
+
+	a) Using optimised sieve of Eratosthenes - https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+	
+	seive(unsigned range)
+	
+	INPUT: an unsigned integer less than 1e8+1
+	OUTPUT: A boolean vector array, where ith index is true if i is a prime otherwise false.
+	TIME COMPLEXITY: O(N*log(log(N)))
+
+2. Prime Checker
+	
+	a) Using fermat little theorem: https://en.wikipedia.org/wiki/Fermat%27s_little_theorem
+	
+	isPrimefermat(unsigned long long number, int iterations) 
+	
+	INPUT: An Unsigned long long integer and a positive integer // Iteration (Integer) should be less than 10^7, By default it's 10000 
+	OUTPUT: Whether it is prime or not
+		-> false : Not a prime number
+		-> true : Is a prime number
+	TIME COMPLEXITY: O(C + K*log(num))  where K= iterations and C= 1000
+
+	b) Using Miller Rabin test : https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
+	
+	isPrimeMillerRabin(unsigned long long number, int iterations)
+	
+	INPUT: An Unsigned long long integer and a positive integer // Iteration (Integer) should be less than 10^7, By default it's 10000 
+	OUTPUT: Whether it is prime or not
+		-> false : Not a prime number
+		-> true : Is a prime number
+	TIME COMPLEXITY: O(K*(log(num))^3) where K= iterations
+
+3. Prime Factorization
+	
+	a) Prime factorization - https://en.wikipedia.org/wiki/Integer_factorization
+	
+	primeFact(unsigned number)
+	
+	INPUT: An unsigned number
+	OUTPUT: map containing the prime factors of the number
+	TIME COMPLEXITY: O(sqrt(num) + O(log(K)))
+
+
+	b) Euler's totient function - https://en.wikipedia.org/wiki/Euler%27s_totient_function
+	
+	etf(unsigned number)
+	
+	INPUT: An unsigned number
+	OUTPUT: Euler totient value of number
+	TIME COMPLEXITY: O(sqrt(num) + O(log(K)))
+	
+4. Modulo Magic
+	
+	a) exponentiation (A^B) - https://en.wikipedia.org/wiki/Exponentiation_by_squaring
+	
+	Exp(unsigned A, unsigned B)
+	
+	INPUT: two unsigned numbers A, B
+	OUTPUT: A^B
+	TIME COMPLEXITY: O(log(B))
+
+	b) modular exponentiation (A^B % M) - https://en.wikipedia.org/wiki/Modular_exponentiation
+	
+	modulo(unsigned long long A, unsigned long long B, unsigned long long M)
+	
+	INPUT: three unsigned long long numbers A, B, and M. [M is a prime number, by default M = 1e9 + 7]
+	OUTPUT: (A^B)%M
+	TIME COMPLEXITY: O(log(B))
+	
+	c) Inverse Modulo - wiki link
+	
+	invMod(unsigned long long A, unsigned long long M)
+	
+	INPUT: two unsigned long long numbers A, M. [M is a prime number, by default M = 1e9 + 7] 
+	OUPUT: (inv(A))%M
+	TIME COMPLEXITY: O(log(M))
+
+	d) Precomputation Inverse modulo - https://en.wikipedia.org/wiki/Modular_multiplicative_inverse
+	
+	invModFast(unsigned range, unsigned M)
+	
+	INPUT: two unsigned numbers range, M, and range less than 1e8. [M is a prime number, by default M = 1e9+ 7]
+	OUTPUT: vector<unsigned> of size A+1, where vector's ith index store (inv(i))%M.
+	TIME COMPLEXITY: O(range)
