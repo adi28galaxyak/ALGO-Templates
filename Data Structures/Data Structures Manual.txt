@@ -1,0 +1,91 @@
+Templates of Number Theory
+
+1. Binary Indexed Tree
+
+	https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/
+	
+	construct(int N, vector< long long > &A)
+
+	INPUT: N representing size of input vector, A represents input vector
+	OUTPUT: Builds a fenwick tree or BIT
+	TIME COMPLEXITY: O(N*log(N))
+
+	getVal(int i)
+
+	INPUT: An integer i less than N.
+	OUTPUT: Sum of vector elements in the range [0, i].  
+	TIME COMPLEXITY: O(log(N))
+
+	update(int i, long long val)
+
+	INPUT: i represents the index of vector whoes value is to be updated by val.
+	OUTPUT: updation done
+	TIME COMPLEXITY: O(log(N))
+
+3. Segment Tree
+
+	https://www.hackerearth.com/notes/segment-tree-and-lazy-propagation/
+
+	buildTree(int id, int L, int R)
+
+	Default input: id = 0, L = 0, R = N-1 [where N is the size of input vector]
+
+	INPUT: Default input
+	OUTPUT: Builds a Segment Tree
+	TIME COMPLEXITY: O(N*log(N))
+
+	getVal(int id, int L, int R, int X, int Y)
+
+	INPUT: two integer X, Y, representing the index range
+	OUTPUT: Returns sum of vector element in the range [X, Y]  
+	TIME COMPLEXITY: O(log(N))
+
+	update(int id, int L, int R, int X, long long data)
+
+	INPUT: X represent index range, data is the value to be updated at index X
+	OUTPUT: updation done
+	TIME COMPLEXITY: O(log(N))
+
+4. Persistent Data Structure
+
+	https://en.wikipedia.org/wiki/Persistent_data_structure
+
+	INPUT: 
+	 	- Initial array
+		- Update first K elements of array at each query
+	OUTPUT:
+		- Status of array at Kth Query
+
+5. Disjoint Set
+
+	https://en.wikipedia.org/wiki/Disjoint-set_data_structure
+
+	UNION
+
+	INPUT: Two integers X and Y
+	OUTPUT: IT joins the Set of X and Set Y if they are not connected.
+
+	FIND
+
+	INPUT: An integer X
+	OUTPUT: IT return the parent of Set X
+
+6. Heavy Light Decomposition of a Tree
+	
+	http://blog.anudeep2011.com/heavy-light-decomposition/
+	
+	hld
+
+	INPUT: A tree
+	OUTPUT: Decomposes the given tree using hld
+
+7. Centroid Decomposition
+	
+	http://codeforces.com/blog/entry/10533
+
+	genCentroidTree
+
+	INPUT: A tree
+	OUTPUT: Build a centroid tree
+	Centroid tree is stored in parentCT
+
