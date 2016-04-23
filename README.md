@@ -5,7 +5,7 @@
 ##Description
 An algorithm library which has implementations of several Number theory functions, Graph theory algorithms, Computational Geometry algorithms, Data Structures, Flow network algorithms, String algorithms. Library also contains various functions of Dynamic programming problems.
 
-Some functions are not yet build, if you need the implementation of them (mentioned here), just <a href="adityagalaxy.ak@gmail.com">write to me</a>
+Some functions are not yet build, if you need the implementation of them (mentioned here), just <a href="mailto:adityagalaxy.ak@gmail.com">write to me</a>
 
 <font color="blue"><h3>Graph Algorithms</h3></font>
 <ul>
